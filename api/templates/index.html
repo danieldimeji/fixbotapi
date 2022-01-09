@@ -46,9 +46,15 @@
     </table>
 
     <script>
+
+        if (window.location.protocol == "https:") {
+            var ws_scheme = "wss://";
+            } else {
+            var ws_scheme = "ws://"
+        };
             
         const APISocket = new WebSocket(
-            'ws://'
+            ws_scheme
             + window.location.host
             + '/ws/api/'
         );
