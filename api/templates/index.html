@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixBot API</title>
+
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Fix Bot Technologies API</h3>
+    
+    <h4>Telemetric Data ( Real Time )</h4>
+    
+    <table id="myTable">
+        <tr>
+          <th>Car ID</th>
+          <th>Engine Temperature</th>
+          <th>Car Speed</th>
+          <th>Car GPS Lat</th>
+          <th>Car GPS Lon</th>
+          <th>Fuel Consumption Rate</th>
+          <th>Accelerometer</th>
+          <th>Steering Angle</th>
+          <th>Last Updated</th>
+        </tr>
+
+    </table>
+
+    <script>
+            
+        const APISocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/api/'
+        );
+
+        APISocket.onmessage = function(e) {
+            console.log('Payload recieved from django RESTful')
+            const data = JSON.parse(e.data);
+            for(let i = 0; i < data['payload'].length; i++){
+                if(document.getElementById(`${data['payload'][i]['id']}`) != null){
+                    var row = document.getElementById(`${data['payload'][i]['id']}`)
+                    for(let x = 0; x < row.cells.length; x++){
+                        row.cells[x].innerHTML = data['payload'][i][key[x]]
+                    }
+                }else{
+                    var table = document.getElementById("myTable");
+                    var row = table.insertRow()
+                    row.setAttribute("id", data['payload'][i]['id'])
+                    key = Object.keys(data['payload'][i]);
+                    for(let x = 0; x < key.length; x++){
+                        var cell = row.insertCell();
+                        cell.innerHTML = data['payload'][i][key[x]]
+                    }
+                }
+            }
+        };
+
+        APISocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+       
+    </script>
+</body>
+</html>

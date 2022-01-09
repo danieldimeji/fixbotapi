@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "4509c9e5-b47d-4d6e-8c6b-9e5d6764a468",
+		"name": "Fix Bot API",
+		"description": "This is a sample API service for FixBot.\n\nContact Support:\n Name: FixBot API Support\n Email: support@fixbotapi.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/data",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get telemetric data with id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/data/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"data",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-56584881",
+											"description": "(Required) id of telemetric to use"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Details about a telemetric data",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-56584881",
+													"description": "(Required) id of telemetric to use"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "x-next",
+											"value": "mollit dolor pariatur est Lorem",
+											"description": "Details about telemetric data"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"engine_temperature\": \"sed irure enim\",\n \"car_speed\": \"et ut\",\n \"car_gps_lat\": \"fugiat nisi ve\",\n \"car_gps_lon\": \"nulla nisi qui\",\n \"fuel_consumption_rate\": \"deserunt ut elit\",\n \"accelerometer\": \"est exercitation\",\n \"steering_angle\": \"aliquip ex\",\n \"last_updated\": \"aute proident non velit\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update telemetric data with id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/data/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"data",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-56584881",
+											"description": "(Required) id of telemetric to use"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Updated telemetric data with id",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-56584881",
+													"description": "(Required) id of telemetric to use"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "x-next",
+											"value": "mollit dolor pariatur est Lorem",
+											"description": "Details about telemetric data"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"engine_temperature\": \"sed irure enim\",\n \"car_speed\": \"et ut\",\n \"car_gps_lat\": \"fugiat nisi ve\",\n \"car_gps_lon\": \"nulla nisi qui\",\n \"fuel_consumption_rate\": \"deserunt ut elit\",\n \"accelerometer\": \"est exercitation\",\n \"steering_angle\": \"aliquip ex\",\n \"last_updated\": \"aute proident non velit\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete telemetric data with id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/data/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"data",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-56584881",
+											"description": "(Required) id of telemetric to use"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Deleted telemetric data with id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-56584881",
+													"description": "(Required) id of telemetric to use"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "x-next",
+											"value": "mollit dolor pariatur est Lorem",
+											"description": "No content"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get all telemetric data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/data",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"data"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All telemetric data from database",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/data",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"data"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "mollit dolor pariatur est Lorem",
+									"description": "A list of all telemetric data from database"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"engine_temperature\": \"sed irure enim\",\n \"car_speed\": \"et ut\",\n \"car_gps_lat\": \"fugiat nisi ve\",\n \"car_gps_lon\": \"nulla nisi qui\",\n \"fuel_consumption_rate\": \"deserunt ut elit\",\n \"accelerometer\": \"est exercitation\",\n \"steering_angle\": \"aliquip ex\",\n \"last_updated\": \"aute proident non velit\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new telemetric data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/data?engine_temperature=sed irure enim&car_speed=et ut&car_gps_lat=fugiat nisi ve&car_gps_lon=nulla nisi qui&fuel_consumption_rate=deserunt ut elit&accelerometer=est exercitation&steering_angle=aliquip ex&last_updated=aute proident non velit",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"data"
+							],
+							"query": [
+								{
+									"key": "engine_temperature",
+									"value": "sed irure enim",
+									"description": "(Required) telemetric data to create"
+								},
+								{
+									"key": "car_speed",
+									"value": "et ut",
+									"description": "(Required) telemetric data to create"
+								},
+								{
+									"key": "car_gps_lat",
+									"value": "fugiat nisi ve",
+									"description": "(Required) telemetric data to create"
+								},
+								{
+									"key": "car_gps_lon",
+									"value": "nulla nisi qui",
+									"description": "(Required) telemetric data to create"
+								},
+								{
+									"key": "fuel_consumption_rate",
+									"value": "deserunt ut elit",
+									"description": "(Required) telemetric data to create"
+								},
+								{
+									"key": "accelerometer",
+									"value": "est exercitation",
+									"description": "(Required) telemetric data to create"
+								},
+								{
+									"key": "steering_angle",
+									"value": "aliquip ex",
+									"description": "(Required) telemetric data to create"
+								},
+								{
+									"key": "last_updated",
+									"value": "aute proident non velit",
+									"description": "(Required) telemetric data to create"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a new telemetric data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/data?engine_temperature=sed irure enim&car_speed=et ut&car_gps_lat=fugiat nisi ve&car_gps_lon=nulla nisi qui&fuel_consumption_rate=deserunt ut elit&accelerometer=est exercitation&steering_angle=aliquip ex&last_updated=aute proident non velit",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"data"
+									],
+									"query": [
+										{
+											"key": "engine_temperature",
+											"value": "sed irure enim"
+										},
+										{
+											"key": "car_speed",
+											"value": "et ut"
+										},
+										{
+											"key": "car_gps_lat",
+											"value": "fugiat nisi ve"
+										},
+										{
+											"key": "car_gps_lon",
+											"value": "nulla nisi qui"
+										},
+										{
+											"key": "fuel_consumption_rate",
+											"value": "deserunt ut elit"
+										},
+										{
+											"key": "accelerometer",
+											"value": "est exercitation"
+										},
+										{
+											"key": "steering_angle",
+											"value": "aliquip ex"
+										},
+										{
+											"key": "last_updated",
+											"value": "aute proident non velit"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "mollit dolor pariatur est Lorem",
+									"description": "Create a new telemetric data"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"engine_temperature\": \"sed irure enim\",\n \"car_speed\": \"et ut\",\n \"car_gps_lat\": \"fugiat nisi ve\",\n \"car_gps_lon\": \"nulla nisi qui\",\n \"fuel_consumption_rate\": \"deserunt ut elit\",\n \"accelerometer\": \"est exercitation\",\n \"steering_angle\": \"aliquip ex\",\n \"last_updated\": \"aute proident non velit\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8000",
+			"type": "string"
+		}
+	]
+}
