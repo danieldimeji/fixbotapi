@@ -17,6 +17,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'fixbotapi.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://fixbotapi.herokuapp.com']
+
 
 # Application definition
 
