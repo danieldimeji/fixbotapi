@@ -15,10 +15,14 @@ A Django REST API that provides data to the Frontend service and implements the 
 * Django REST framework 3.13.1
 * Redis server 
 
-# Run on local server
+# Run on local machine
 * Download repository files
 * run: "pipenv shell" in your shell
 * run: pipenv install -r requirements.txt
 * run: docker run -p 6379:6379 -d redis:5
 * run: python manage.py runserver
 
+# Endpoints
+* On local server url: 127.0.0.1:8000/api/data
+* On production server url: https://fixbotapi.herokuapp.com/api/data
+* front end url: https://fixbotapi.herokuapp.com/api
